@@ -10,7 +10,7 @@ June 30, 2017
 
 
 
-###Comparing Number of Review by Year and Style
+### Comparing Number of Review by Year and Style
 The first thing we notice is that IPA's (Both regular and Double) have seen a massive increase in number of review compared to other styles.  The second thing we notice is the 2nd and 3rd highest are Double (higher alcohol beers).
 
 ```r
@@ -33,7 +33,7 @@ ggplot(data=beer_trend,aes(x=Review_Quarter,y=n,color=beer_style))+geom_smooth(s
 
 ![](BeerAdv_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-###Comparing Number of Reviews by ABV
+### Comparing Number of Reviews by ABV
 
 ```r
 #create abv grouping
@@ -61,7 +61,7 @@ ggplot(data=beer_abv,aes(x=Review_Quarter,y=n,color=ABV_Group))+geom_smooth(se=F
 ```
 
 ![](BeerAdv_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
-###Split ABV by Top Styles
+### Split ABV by Top Styles
 
 
 ```r
@@ -86,7 +86,7 @@ ggplot(data=beer_abv %>% filter(ABV_Group=="5-7"),aes(x=Review_Quarter,y=n,color
 
 ![](BeerAdv_files/figure-html/unnamed-chunk-5-2.png)<!-- -->
 
-###Ratings
+### Ratings
 Each beer is given a rating by the user based on 4 characteristic:
 
  * Taste

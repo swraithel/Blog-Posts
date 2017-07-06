@@ -63,7 +63,7 @@ knitr::kable(beer_styles_top5)
 
 ```
 
-###Comparing Number of Review by Year and Style
+### Comparing Number of Review by Year and Style
 The first thing we notice is that IPA's (Both regular and Double) have seen a massive increase in number of review compared to other styles.  The second thing we notice is the 2nd and 3rd highest are Double (higher alcohol beers).
 ```{r,}
 beer_trend<-beer %>% filter(beer_style %in% beer_styles_top5$beer_style) %>% count(Review_Quarter,beer_style)
@@ -78,7 +78,7 @@ ggplot(data=beer_trend,aes(x=Review_Quarter,y=n,color=beer_style))+geom_smooth(s
 
 ```
 
-###Comparing Number of Reviews by ABV
+### Comparing Number of Reviews by ABV
 ```{r}
 #create abv grouping
 #what is typical?
@@ -94,7 +94,7 @@ ggplot(data=beer_abv,aes(x=Review_Quarter,y=n,color=ABV_Group))+geom_smooth(se=F
 
 
 ```
-###Split ABV by Top Styles
+### Split ABV by Top Styles
 
 ```{r}
 ggplot(data=beer_abv,aes(x=Review_Quarter,y=n,color=ABV_Group))+geom_smooth(se=FALSE)
@@ -109,7 +109,7 @@ ggplot(data=beer_abv %>% filter(ABV_Group=="5-7"),aes(x=Review_Quarter,y=n,color
 
 ```
 
-###Ratings
+### Ratings
 Each beer is given a rating by the user based on 4 characteristic:
 
  * Taste
